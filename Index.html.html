@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Historia de Cinnamoroll</title>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+
+            body {
+
+
+            margin: 0;
+
+            font-family: Arial, sans-serif;
+
+            text-align: center;
+
+            min-height: 100vh;
+
+            overflow-x: hidden;
+
+            background-size: 300px;
+
+            background-repeat: repeat;
+
+            background-position: center;
+
+            background-attachment: fixed;
+
+        }
+
+
+
+        /* CAPA SUAVE SOBRE EL FONDO */
+
+        body::before {
+
+            content: "";
+
+            position: fixed;
+
+            inset: 0;
+
+            background: rgba(80, 180, 240, 0.15);
+
+            pointer-events: none;
+
+            z-index: 0;
+
+        }
+
+
+        /* CONTENIDO */
+
+        .pagina {
+
+            position: relative;
+
+            z-index: 2;
+
+            padding: 30px 20px 50px;
+
+        }
+
+
+        /* TITULO */
+
+        h1 {
+
+            color: white;
+
+            font-size: 48px;
+
+            margin: 10px 0 5px;
+
+            text-shadow:
+
+                3px 3px 0 #2488d8,
+
+                0 0 10px #ffffff,
+
+                0 0 20px #ffffff;
+
+        }
+
+
+        .decoracion {
+
+            color: white;
+
+            font-size: 25px;
+
+            margin-bottom: 20px;
+
+            text-shadow: 2px 2px 5px #318bd0;
+
+        }
+
+
+        /* PERSONAJE */
+
+        .personaje {
+
+            width: 190px;
+
+            height: auto;
+
+            position: ;
+
+            z-index: 5;
+
+            margin: 0 auto 10px;
+
+            display: block;
+
+            animation: volar 3s ease-in-out infinite;
+
+
+
+
+        }
+
+
+        @keyframes volar {
+
+            0% {
+
+                transform: translateY(0px);
+
+            }
+
+            50% {
+
+                transform: translateY(-12px);
+
+            }
+
+            100% {
+
+                transform: translateY(0px);
+
+            }
+
+        }
+
+
+        /* CONTENEDOR DE LOS 3 CUADROS */
+
+        .contenedor {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: stretch;
+
+            gap: 25px;
+
+            max-width: 1200px;
+
+            margin: 20px auto;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        /* CUADROS */
+
+        .caja {
+
+            width: 350px;
+
+            min-height: 460px;
+
+            padding: 28px;
+
+            background: rgba(255, 255, 255, 0.96);
+
+            border: 4px solid #8bc9fa;
+
+            border-radius: 30px;
+
+            box-shadow:
+
+                0 10px 25px rgba(0, 80, 150, 0.30),
+
+                inset 0 0 15px rgba(150, 220, 255, 0.5);
+
+            position: relative;
+
+            transition: 0.3s;
+
+        }
+
+
+        /* EFECTO AL PASAR EL MOUSE */
+
+        .caja:hover {
+
+            transform: translateY(-10px);
+
+            box-shadow:
+
+                0 18px 35px rgba(0, 80, 150, 0.40);
+
+        }
+
+
+        /* MOÑO ARRIBA */
+
+        .caja::before {
+
+            content: "🎀";
+
+            position: absolute;
+
+            top: -30px;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            font-size: 45px;
+
+        }
+
+
+        /* NUMERO */
+
+        .numero {
+
+            width: 50px;
+
+            height: 50px;
+
+            margin: 5px auto 15px;
+
+            border-radius: 50%;
+
+            background: #72b8f2;
+
+            color: white;
+
+            font-size: 25px;
+
+            font-weight: bold;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            border: 4px solid white;
+
+            box-shadow: 0 4px 10px rgba(50,130,200,0.3);
+
+        }
+
+
+        /* TITULOS */
+
+        .caja h2 {
+
+            color: #398fd3;
+
+            font-size: 25px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        /* LINEA DECORATIVA */
+
+        .linea {
+
+            color: #7dc5f5;
+
+            font-size: 18px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        /* TEXTO */
+
+        .caja p {
+
+            color: #496b86;
+
+            font-size: 17px;
+
+            line-height: 1.7;
+
+            text-align: justify;
+
+        }
+
+
+        /* DIBUJITO */
+
+        .mini {
+
+            font-size: 55px;
+
+            margin-top: 15px;
+
+        }
+
+
+        /* CORAZONES */
+
+        .corazones {
+
+            color: #ff9fc5;
+
+            font-size: 23px;
+
+            margin: 10px;
+
+        }
+
+
+
+
+        /* CELULAR */
+
+        @media (max-width: 800px) {
+
+            h1 {
+
+                font-size: 34px;
+
+            }
+
+            .caja {
+
+                width: 90%;
+
+            }
+
+            .personaje {
+
+                width: 150px;
+
+            }
+
+        }
+
+        button {
+              background: #8dccf5;
+              color: white;
+              border: 3px solid white;
+              border-radius: 25px;
+              padding: 12px 25px;
+              font-size: 16px;
+              font-weight: bold;
+              cursor: pointer;
+              box-shadow: 0 5px 10px rgba(70, 150, 210, 0.3);
+              transition: 0.3s;
+              
+            }
+
+        button:hover {
+              background: #65b5ed;
+              transform: scale(1.08);
+              box-shadow: 0 7px 15px rgba(70, 150, 210, 0.4);
+        
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+
+    <div class="pagina">
+
+
+        <!-- PERSONAJE -->
+
+
+
+        <!-- TITULO -->
+
+        <h1>
+            ☁️ Historia de Cinnamoroll ☁️
+        </h1>
+
+       
+        <div class="decoracion">
+            ♡ ─────── ✦ ─────── ♡
+        </div>
+        
+        <img src="imagen/Cinnamon.png" class="personaje" alt="Cinnamoroll">
+
+        <div class="contenedor">
+
+
+
+        <!-- TRES CUADROS -->
+
+        <div class="contenedor">
+
+
+            <!-- CUADRO 1 -->
+
+            <div class="caja">
+
+                <div class="numero">
+                    1
+                </div>
+
+                <h2>
+                    ¿Quién es Cinnamoroll?
+                </h2>
+
+                <div class="linea">
+                    ─────── ♡ ───────
+                </div>
+
+                <p>
+
+                    Cinnamoroll es un perrito blanco creado
+                    por Sanrio. Se caracteriza por sus largas
+                    orejas, sus mejillas rosadas y su pequeña
+                    cola que tiene forma de rollito de canela.
+
+                </p>
+
+                <p>
+
+                    Es un personaje amable, tranquilo,
+                    cariñoso y muy querido por sus amigos.
+
+                </p>
+
+                <div class="corazones">
+                    ♡ ♡ ♡
+                </div>
+
+                <div class="mini">
+                    💙
+                </div>
+
+            </div>
+
+
+            <!-- CUADRO 2 -->
+
+            <div class="caja">
+
+                <div class="numero">
+                    2
+                </div>
+
+                <h2>
+                    Sus amigos
+                </h2>
+
+                <div class="linea">
+                    ─────── ♡ ───────
+                </div>
+
+                <p>
+
+                    Cinnamoroll vive junto a sus amigos
+                    y comparte muchas aventuras con ellos.
+                    Entre sus amigos están Mocha, Chiffon,
+                    Cappuccino, Espresso y Milk.
+
+                </p>
+
+                <p>
+
+                    Juntos se divierten, se ayudan y
+                    disfrutan de diferentes momentos
+                    en el Café Cinnamon.
+
+                </p>
+
+                <div class="corazones">
+                    ♡ ♡ ♡
+                </div>
+
+                <div class="mini">
+                    💙
+                </div>
+
+            </div>
+
+
+            <!-- CUADRO 3 -->
+
+            <div class="caja">
+
+                <div class="numero">
+                    3
+                </div>
+
+                <h2>
+                    Su historia
+                </h2>
+
+                <div class="linea">
+                    ─────── ♡ ───────
+                </div>
+
+                <p>
+
+                    Un día, Cinnamoroll fue encontrado por
+                    la dueña del Café Cinnamon cuando era
+                    todavía un pequeño cachorro.
+
+                </p>
+
+                <p>
+
+                    Desde entonces comenzó a vivir en el café
+                    junto a sus amigos y tuvo muchas aventuras.
+                    Su personalidad dulce y amable hace que
+                    todos lo quieran.
+
+                </p>
+                
+                <button onclick="alert('✨ Esta página tendrá más actualizaciones próximamente.¡Vuelve pronto para descubrir más sobre Cinnamoroll! 💙☁️')">Leer más</button>
+                <div class="corazones">
+                    ♡ ♡ ♡
+                </div>
+
+                <div class="mini">
+                    💙
+                </div>
+
+
+
+</div>
+
+</body>
+
+</html>
